@@ -9,7 +9,6 @@ const Statistics = (props) => {
     return sum/props.all.length
   }
 
-  //ei toimi kunnolla, laskun tulos väärä (ei kasva)
   const Positives = () => {
     const positives = props.all.filter   
     return positives.length/props.all.length*100
