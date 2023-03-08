@@ -9,16 +9,16 @@ const Part = (props) => {
 const Header = (props) => {
     return (
       <div>
-        <h1>{props.name}</h1>
+        <h1>{props.course.name}</h1>
       </div>
     )
   }
     
-  const Content = (props) => {
-    return (
-      <div>
-        {props.parts.map(part => <Part key = {part.id} part = {part} /> )}
-      </div>
+const Content = (props) => {
+  return (
+    <div> 
+      {props.parts.map(part => <Part key = {part.id} part = {part} /> )} 
+    </div>
     )
   }
 
@@ -32,14 +32,13 @@ const Header = (props) => {
     )
   }
 
-  //tähän vielä kurssien otsikot? Tällä hetkellä näkyy vain osiot, ei kurssia
   const Course = ({course}) => {
     return (
       <div>
-        <Header course = {course.name} />
+        <Header course = {course} />
         <Content parts = {course.parts} />
         <Total parts = {course.parts} />
-    </div>
+      </div>
     )
   }
 
